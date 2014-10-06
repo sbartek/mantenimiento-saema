@@ -38,4 +38,11 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'database_cleaner', github:
+'bmabey/database_cleaner', group: :test
+gem 'factory_girl_rails', group: [:test]
 gem 'bcrypt'
+gem 'rails_12factor', group: :production
+gem 'rspec-rails', group: [:development, :test]
+gem 'capybara', group: :test
+gem 'cucumber-rails', :require => false, group: :test
