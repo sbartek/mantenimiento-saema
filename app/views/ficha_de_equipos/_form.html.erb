@@ -1,0 +1,41 @@
+<%= form_for(@ficha_de_equipo) do |f| %>
+  <% if @ficha_de_equipo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ficha_de_equipo.errors.count, "error") %> prohibited this ficha_de_equipo from being saved:</h2>
+
+      <ul>
+      <% @ficha_de_equipo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion_tecnica %><br>
+    <%= f.text_area :descripcion_tecnica %>
+  </div>
+  <div class="field">
+    <%= f.label :ref_modelo %><br>
+    <%= f.text_field :ref_modelo %>
+  </div>
+  <div class="field">
+    <%= f.label :fabricante_id %><br>
+    <%= f.number_field :fabricante_id %>
+  </div>
+  <div class="field">
+    <%= f.label :proveedor_id %><br>
+    <%= f.number_field :proveedor_id %>
+  </div>
+  <div class="field">
+    <%= f.label :marca_id %><br>
+    <%= f.number_field :marca_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

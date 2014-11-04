@@ -1,0 +1,35 @@
+<h1>Listing ficha_de_equipos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion tecnica</th>
+      <th>Ref modelo</th>
+      <th>Fabricante</th>
+      <th>Proveedor</th>
+      <th>Marca</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ficha_de_equipos.each do |ficha_de_equipo| %>
+      <tr>
+        <td><%= ficha_de_equipo.nombre %></td>
+        <td><%= ficha_de_equipo.descripcion_tecnica %></td>
+        <td><%= ficha_de_equipo.ref_modelo %></td>
+        <td><%= ficha_de_equipo.fabricante_id %></td>
+        <td><%= ficha_de_equipo.proveedor_id %></td>
+        <td><%= ficha_de_equipo.marca_id %></td>
+        <td><%= link_to 'Show', ficha_de_equipo %></td>
+        <td><%= link_to 'Edit', edit_ficha_de_equipo_path(ficha_de_equipo) %></td>
+        <td><%= link_to 'Destroy', ficha_de_equipo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ficha de equipo', new_ficha_de_equipo_path %>

@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :accion_de_mantenimientos
+
+  resources :equipos
+
+  resources :ficha_de_equipos
+
   resources :marcas
 
   resources :fabricantes

@@ -1,0 +1,29 @@
+<h1>Listing accion_de_mantenimientos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ficha de equipo</th>
+      <th>Periodicidad</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accion_de_mantenimientos.each do |accion_de_mantenimiento| %>
+      <tr>
+        <td><%= accion_de_mantenimiento.ficha_de_equipo_id %></td>
+        <td><%= accion_de_mantenimiento.periodicidad %></td>
+        <td><%= accion_de_mantenimiento.descripcion %></td>
+        <td><%= link_to 'Show', accion_de_mantenimiento %></td>
+        <td><%= link_to 'Edit', edit_accion_de_mantenimiento_path(accion_de_mantenimiento) %></td>
+        <td><%= link_to 'Destroy', accion_de_mantenimiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Accion de mantenimiento', new_accion_de_mantenimiento_path %>

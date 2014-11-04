@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @ficha_de_equipo.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion tecnica:</strong>
+  <%= @ficha_de_equipo.descripcion_tecnica %>
+</p>
+
+<p>
+  <strong>Ref modelo:</strong>
+  <%= @ficha_de_equipo.ref_modelo %>
+</p>
+
+<p>
+  <strong>Fabricante:</strong>
+  <%= @ficha_de_equipo.fabricante_id %>
+</p>
+
+<p>
+  <strong>Proveedor:</strong>
+  <%= @ficha_de_equipo.proveedor_id %>
+</p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @ficha_de_equipo.marca_id %>
+</p>
+
+<%= link_to 'Edit', edit_ficha_de_equipo_path(@ficha_de_equipo) %> |
+<%= link_to 'Back', ficha_de_equipos_path %>

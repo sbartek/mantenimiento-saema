@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ficha de equipo:</strong>
+  <%= @accion_de_mantenimiento.ficha_de_equipo_id %>
+</p>
+
+<p>
+  <strong>Periodicidad:</strong>
+  <%= @accion_de_mantenimiento.periodicidad %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @accion_de_mantenimiento.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_accion_de_mantenimiento_path(@accion_de_mantenimiento) %> |
+<%= link_to 'Back', accion_de_mantenimientos_path %>

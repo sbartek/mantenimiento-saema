@@ -1,0 +1,2 @@
+module FichaDeEquiposHelper
+end
