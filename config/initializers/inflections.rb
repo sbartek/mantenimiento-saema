@@ -18,4 +18,5 @@
 ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.irregular 'ubicacion', 'ubicaciones'
   inflect.irregular 'ficha de equipo', 'fichas de equipos'
+  inflect.irregular 'proveedor', 'proveedores'
 end

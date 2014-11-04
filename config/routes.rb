@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :marcas
+
+  resources :fabricantes
+
+  resources :proveedores
+
   resources :zonas
 
   resources :areas
