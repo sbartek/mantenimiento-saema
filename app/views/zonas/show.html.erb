@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @zona.nombre %>
+</p>
+
+<p>
+  <strong>Area pt:</strong>
+  <%= @zona.area_pt %>
+</p>
+
+<%= link_to 'Edit', edit_zona_path(@zona) %> |
+<%= link_to 'Back', zonas_path %>

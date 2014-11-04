@@ -11,15 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141006125313) do
+ActiveRecord::Schema.define(version: 20141104125439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "areas", force: true do |t|
+    t.string   "nombre"
+    t.integer  "ubicacion_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ubicaciones", force: true do |t|
+    t.string   "nombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "usuarios", force: true do |t|
     t.string   "nombre"
     t.string   "email"
     t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "zonas", force: true do |t|
+    t.integer  "nombre"
+    t.integer  "area_pt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :zonas
+
+  resources :areas
+
+  resources :ubicaciones
+
   get 'usuario/new'
 
   # The priority is based upon order of creation: first created -> highest priority.
